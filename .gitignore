@@ -17,3 +17,4 @@ bin/
 .sts4-cache
 .idea/
 .DS_Store
+/.metadata/
