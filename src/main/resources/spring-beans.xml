@@ -6,14 +6,15 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- StringPrinter 클래스를 Bean으로 등록 -->
-	<bean id="stringPrinter" class="myspring.di.xml.StringPrinter"/>
+	<bean id="stringPrinter" class="myspring.di.xml.StringPrinter" />
 	
 	<!-- ConsolePrinter 클래스를 Bean으로 등록 -->
-	<bean id="consolePrinter" class="myspring.di.xml.ConsolePrinter"/>
+	<bean id="consolePrinter" class="myspring.di.xml.ConsolePrinter" />
 	
 	<!-- Hello 클래스를 Bean으로 등록 -->
 	<bean id="hello" class="myspring.di.xml.Hello">
-		<property name="name" value="스프링"/>
+		<property name="name" value="스프링" />
 		<property name="printer" ref="stringPrinter" />
 	</bean>
+	
 </beans>
