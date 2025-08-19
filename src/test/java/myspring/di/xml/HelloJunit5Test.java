@@ -1,9 +1,11 @@
 package myspring.di.xml;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+
+//static import
+import static org.junit.jupiter.api.Assertions.*;
 
 public class HelloJunit5Test {
 
@@ -18,6 +20,8 @@ public class HelloJunit5Test {
 		//주소를 비교해서 Singleton인지 확인하기
 		System.out.println(helloById == helloByType);
 		//Assertions.assertSame() 사용
-		Assertions.assertSame(helloById, helloByType);
+		assertSame(helloById, helloByType);
+		
+		
 	}
 }
