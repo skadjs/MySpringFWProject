@@ -22,6 +22,14 @@ public class HelloJunit5Test {
 		//Assertions.assertSame() 사용
 		assertSame(helloById, helloByType);
 		
+		//<property name="name" value="스프링" /> 설정을 테스트
+		//값 비교하기
+		assertEquals("Hello 스프링", helloByType.sayHello());
 		
+		//<property name="printer" ref="stringPrinter" /> 설정을 테스트
+		helloByType.print();
+		
+		//StringPrinter 스프링빈을 호출
+		Printer printer = context.getBean("stringPrinter", Printer.class);
 	}
 }
