@@ -17,3 +17,7 @@ bin/
 .sts4-cache
 .idea/
 .DS_Store
+<<<<<<< HEAD
+=======
+/.metadata/
+>>>>>>> ffadec4fd6c74397a3cabe74785ef564ce62608d
