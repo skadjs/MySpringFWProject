@@ -11,11 +11,21 @@
 	<!-- ConsolePrinter 클래스를 Bean으로 등록 -->
 	<bean id="consolePrinter" class="myspring.di.xml.ConsolePrinter" />
 	
-	<!-- Hello 클래스를 Bean으로 등록 -->
+	<!-- 
+		void setFirstName(String name) <-setter 이름이 이럴 때,
+		<property name="firstName" <-property에는 set 제외 + 소문자 시작
+	-->
+	<!-- Hello 클래스를 Bean으로 등록(Setter Injection) -->
 	<bean id="hello" class="myspring.di.xml.Hello" scope="singleton"> <!-- scope는 singleton이 디폴트 -->
 		<!--  setter injection -->
 		<property name="name" value="스프링" />
 		<property name="printer" ref="stringPrinter" />
 	</bean>
 	
+	<!-- Hello 클래스를 Bean으로 등록(Constructor Injection) -->
+	<bean id="helloC" class="myspring.di.xml.Hello" >
+		<!-- constructor injection -->
+		<constructor-arg index="0" value="생성자" />
+		<constructor-arg index="1" ref="consolePrinter" />
+	</bean>
 </beans>
