@@ -24,9 +24,9 @@ public class HelloBeanSpringTest {
 	// 전략2의 constructor injection 설정을 테스트
 	@Test
 	void helloBeanConstructor() {
-		assertEquals("Hello 생성자 어노테이션", hello.sayHello());
+		assertEquals("Hello 생성자어노테이션", hello.sayHello());
 		hello.print();
-		assertEquals("Hello 생성자 어노테이션", printer.toString());
+		assertEquals("Hello 생성자어노테이션", printer.toString());
 	}
 	
 	// 전략2의 setter injection 설정을 테스트

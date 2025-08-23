@@ -13,13 +13,13 @@ public class HelloBean {
 	
 	// <property name="name" value="어노테이션" />
 // 전략2 - setter injection
-//	@Value("어노테이션")
+	@Value("${myname21}")
 	String name;
 	
 	// <property name="printer" ref="stringPrinter" />
 // 전략2 - setter injection
-//	@Autowired
-//	@Qualifier("stringPrinterBean")
+	@Autowired
+	@Qualifier("stringPrinterBean")
 	PrinterBean printer;
 	
 	List<String> names;
@@ -29,14 +29,14 @@ public class HelloBean {
 	}
 
 // 전략2 - constructor injection
-	@Autowired
-	public HelloBean(
-			@Value("생성자 어노테이션") String name,
-			@Qualifier("stringPrinterBean") PrinterBean printer) {
-		System.out.println(this.getClass().getName() + " Overloaded 생성자가 호출됨");
-		this.name = name;
-		this.printer = printer;
-	}
+//	@Autowired
+//	public HelloBean(
+//			@Value("생성자어노테이션") String name,
+//			@Qualifier("stringPrinterBean") PrinterBean printer) {
+//		System.out.println(this.getClass().getName() + " Overloaded 생성자가 호출됨");
+//		this.name = name;
+//		this.printer = printer;
+//	}
 
 	public List<String> getNames() {
 		return this.names;
