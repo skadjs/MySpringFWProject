@@ -27,15 +27,16 @@
 	<!-- Hello 클래스를 Bean으로 등록(Setter Injection) -->
 	<bean id="hello" class="myspring.di.xml.Hello" scope="singleton"> <!-- scope는 singleton이 디폴트 -->
 		<!--  setter injection -->
-		<property name="name" value="${myname1}" />
+		<property name="name" value="${myname11}" />
 		<property name="printer" ref="stringPrinter" />
 	</bean>
 	
 	<!-- Hello 클래스를 Bean으로 등록(Constructor Injection) -->
 	<bean id="helloC" class="myspring.di.xml.Hello" >
 		<!-- constructor injection -->
-		<constructor-arg index="0" value="생성자" />
+		<constructor-arg index="0" value="${myname12}" />
 		<constructor-arg index="1" ref="consolePrinter" />
 	</bean>
 	<!-- 전략1 끝 -->
+	
 </beans>
