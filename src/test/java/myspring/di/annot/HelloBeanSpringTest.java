@@ -21,7 +21,7 @@ public class HelloBeanSpringTest {
 	@Qualifier("stringPrinterBean")
 	PrinterBean printer;
 	
-	// 전략2의 contructor injection 설정을 테스트
+	// 전략2의 constructor injection 설정을 테스트
 	@Test
 	void helloBeanConstructor() {
 		assertEquals("Hello 생성자 어노테이션", hello.sayHello());
