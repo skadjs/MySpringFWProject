@@ -36,6 +36,14 @@
 		<!-- constructor injection -->
 		<constructor-arg index="0" value="${myname12}" />
 		<constructor-arg index="1" ref="consolePrinter" />
+		<!-- setName() 호출하는 setter injection 설정 -->
+		<property name="names">
+			<list>
+				<value>Java</value>
+				<value>SpringFW</value>
+				<value>SpringBoot</value>
+			</list>
+		</property>
 	</bean>
 	<!-- 전략1 끝 -->
 	

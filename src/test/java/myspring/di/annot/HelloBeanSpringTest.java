@@ -22,7 +22,7 @@ public class HelloBeanSpringTest {
 	PrinterBean printer;
 	
 	// 전략2의 constructor injection 설정을 테스트
-	@Test
+	@Test @Disabled
 	void helloBeanConstructor() {
 		assertEquals("Hello 생성자어노테이션", hello.sayHello());
 		hello.print();
@@ -30,7 +30,7 @@ public class HelloBeanSpringTest {
 	}
 	
 	// 전략2의 setter injection 설정을 테스트
-	@Test @Disabled
+	@Test //@Disabled
 	void helloBean() {
 		assertEquals("Hello 어노테이션", hello.sayHello());
 		
