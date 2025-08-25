@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration //설정 클래스임을 나타내는 어노테이션
 @ComponentScan(basePackages = {"myspring.di.annot"})
-@PropertySource(value = "classpath:values.properties")
+@PropertySource(value = "classpath:values.properties") //properties 파일 위치 알려주는 어노테이션
 public class HelloBeanConfig {
 
 }
