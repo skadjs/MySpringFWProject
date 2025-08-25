@@ -21,6 +21,6 @@ public class HelloBeanConfigTest {
 	
 	@Test
 	void helloBean전략31() {
-	System.out.println(hello.sayHello());
+		System.out.println(hello.sayHello());
 	}
 }
