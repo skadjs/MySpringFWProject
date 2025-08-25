@@ -25,7 +25,7 @@ public class HelloBean {
 	@Resource(name = "${myprinter21}")
 	PrinterBean printer;
 	
-	@Value("Java,SpringFW,SpringBoot")
+	@Value("#{'${mynames21}'.split(',')}")
 	List<String> names;
 
 	public HelloBean() {
@@ -46,9 +46,9 @@ public class HelloBean {
 		return this.names;
 	}
 
-	public void setNames(List<String> list) {
-		this.names = list;
-	}
+//	public void setNames(List<String> list) {
+//		this.names = list;
+//	}
 
 //	public void setName(String name) {
 //		System.out.println(this.getClass().getName() + "setName() 호출됨 " + name);
