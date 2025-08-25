@@ -14,17 +14,18 @@ import org.springframework.stereotype.Component;
 public class HelloBean {
 	
 	// <property name="name" value="어노테이션" />
-// 전략2 - setter injection
+	// 전략2 - setter injection
 	@Value("${myname21}")
 	String name;
 	
 	// <property name="printer" ref="stringPrinter" />
-// 전략2 - setter injection
+	// 전략2 - setter injection
 	@Autowired
 	@Qualifier("stringPrinterBean")
 	@Resource(name = "${myprinter21}")
 	PrinterBean printer;
 	
+	@Value("Java,SpringFW,SpringBoot")
 	List<String> names;
 
 	public HelloBean() {
